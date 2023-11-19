@@ -12,6 +12,11 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint5.Task1.V7
     {
         static void Main(string[] args)
         {
+            int startValue = -5;
+            int stopValue = 5;
+
+            DataService ds = new DataService();
+
             Console.Title = "Спринт #3 | Выполнил: Зайнагабдинов Р. А. | ИСТНб-23-1";
             //Длина строки 75 символов
             Console.WriteLine("***************************************************************************");
@@ -38,34 +43,16 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint5.Task1.V7
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            DataService ds = new DataService();
-
-            int startValue = -5;
-            int stopValue = 5;
-
             Console.WriteLine("Старт шага = " + startValue);
             Console.WriteLine("Конец шага = " + stopValue);
-
-            int len = ds.SaveToFileTextData(startValue, stopValue).Length;
-
-            double[] valueArray;
-            valueArray = new double[len];
-
-            valueArray = ds.SaveToFileTextData(startValue, stopValue);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine("+----------+----------+");
-            Console.WriteLine("|     X    |   f(x)   |");
-            Console.WriteLine("+----------+----------+");
-            for (int i = 0; i <= len - 1; i++)
-            {
-                Console.WriteLine("|{0,5:d}  |   {1, 6:f2}    |", startValue, valueArray[i]);
-                startValue++;
-            }
-            Console.WriteLine("+----------+----------+");
+            string res = ds.SaveToFileTextData(startValue, stopValue);
+
+            Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
             Console.ReadKey();
         }

@@ -24,20 +24,21 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint5.Task1.V7.Lib
                 File.Delete(outputFile);
             }
 
-            double[] valueArray;
-            int len = (stopValue - startValue + 1);
-            valueArray = new double[len];
-            int count = 0;
+            double y;
+            string strY;
             for (int x = startValue; x <= stopValue; x++)
             {
-                if (x + 1.2 == 0)
+                y = Math.Round((Math.Sin(x)) / (x + 1.2) + Math.Sin(x) * 2 - 2 * x, 2);
+                strY = Convert.ToString(y);
+
+                if (x != stopValue)
                 {
-                    valueArray[count] = 0;
-                    continue;
+                    File.AppendAllText(outputFile, strY + Environment.NewLine);
                 }
-                double y = Math.Round((Math.Sin(x)) / (x + 1.2) + Math.Sin(x) * 2 - 2 * x, 2);
-                valueArray[count] = y;
-                count++;
+                else
+                {
+                    File.AppendAllText(outputFile, strY);
+                }
             }
             return outputFile;
         }
