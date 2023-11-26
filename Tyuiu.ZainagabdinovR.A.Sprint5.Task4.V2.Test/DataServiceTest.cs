@@ -13,7 +13,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint5.Task4.V2.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Asus\source\repos\Tyuiu.ZainagabdinovR.A.Sprint5\Tyuiu.ZainagabdinovR.A.Sprint5.Task4.V2\bin\Debug\InPutDataFileTask4V2.txt";
+            string path = @"C:\Users\Asus\source\repos\Tyuiu.ZainagabdinovR.A.Sprint5\Tyuiu.ZainagabdinovR.A.Sprint5.Task4.V2\bin\Debug\InPutDataFileTask4V2.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;

@@ -39,7 +39,7 @@ namespace Tyuiu.ZainagabdinovR.A.Sprint5.Task4.V2
             Console.WriteLine("***************************************************************************");
 
             DataService ds = new DataService();
-            string path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask4V2.txt";
+            string path = $@"C:\Users\Asus\source\repos\Tyuiu.ZainagabdinovR.A.Sprint5\Tyuiu.ZainagabdinovR.A.Sprint5.Task4.V2\bin\Debug\InPutDataFileTask4V2.txt";
 
             Console.WriteLine("Данные находится в файле: " + path);
 
